@@ -11,9 +11,6 @@ public class Ablaufen : MonoBehaviour
     public GameObject check;
     public GameObject player;
     public bool alreadyTriggered = false; // Variable, um zu überprüfen, ob der Trigger bereits aktiviert wurde
-    private bool timerStarted = false; // überprüfen, ob der Timer gestartet wurde
-    private float timer = 0f;
-    private float maxTimerDuration = 30f; // Maximaldauer des Timers in Sekunden
 
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
@@ -24,6 +21,7 @@ public class Ablaufen : MonoBehaviour
 
     private Animator animator;
     public AudioSource audioSource;
+    public AudioClip FrageAudioClip;
 
     private void Start()
     {
@@ -86,6 +84,8 @@ public class Ablaufen : MonoBehaviour
                 animator.SetTrigger("Warten_Kontrolle");
                 audioSource.Pause();
                 isDelaying = true;
+                audioSource.clip = FrageAudioClip;
+                audioSource.Play();
 
                 if (check.activeSelf)
                 {
@@ -108,8 +108,6 @@ public class Ablaufen : MonoBehaviour
             isDelaying = true;
             yield return new WaitForSeconds(delayAtWaypoint);
             isDelaying = false;
-
-            Debug.Log("STOP");
 
             GoToNextWaypoint();
         }
