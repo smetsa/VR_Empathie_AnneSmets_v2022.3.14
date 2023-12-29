@@ -17,11 +17,10 @@ public class Ablaufen : MonoBehaviour
     private bool reachedDestination = false;
     public bool isDelaying = false;
 
-
-
     private Animator animator;
     public AudioSource audioSource;
     public AudioClip FrageAudioClip;
+    private bool FrageAudioPlayed = false;
 
     private void Start()
     {
@@ -33,13 +32,10 @@ public class Ablaufen : MonoBehaviour
         }
     }
 
-
-
     private void Update()
     {
         if (!reachedDestination)
         {
-            Debug.Log("MOVE");
             MoveToWaypoint();
         }
         else if (currentWaypointIndex != waypoints.Length - 2 && !isDelaying)
@@ -79,13 +75,28 @@ public class Ablaufen : MonoBehaviour
 
         if (distanceToPlayer < 1f)
         {
+
             while (!alreadyTriggered)
             {
                 animator.SetTrigger("Warten_Kontrolle");
                 audioSource.Pause();
                 isDelaying = true;
-                audioSource.clip = FrageAudioClip;
-                audioSource.Play();
+
+                if (!FrageAudioPlayed) // Überprüfe, ob der FrageAudioClip noch nicht abgespielt wurde
+                {
+                    audioSource.clip = FrageAudioClip;
+
+                    if (audioSource.clip == null)
+                    {
+                        Debug.LogError("FrageAudioClip ist nicht zugewiesen!");
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(audioSource.clip);
+                        FrageAudioPlayed = true; // Markiere den FrageAudioClip als abgespielt
+                    }
+                }
+
 
                 if (check.activeSelf)
                 {
