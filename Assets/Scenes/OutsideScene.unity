@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.593
   m_CustomReflection: {fileID: 8900000, guid: 3c4b546d96d1b6345afd414860ac8865, type: 3}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.008962307, g: 0.005364672, b: 0.008358332, a: 0.593}
+  m_IndirectSpecularColor: {r: 0.009104943, g: 0.0054535987, b: 0.008490112, a: 0.593}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6404,11 +6404,6 @@ SphereCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef7ad894ab754e34582b5f4b4a471fa8, type: 3}
   m_PrefabInstance: {fileID: 277514055}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &649439109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1866928295027076933, guid: 862019cb68dd9b144ac4530c1a165707, type: 3}
-  m_PrefabInstance: {fileID: 1325185687}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &661534216 stripped
 GameObject:
@@ -19385,6 +19380,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 1243716353}
+--- !u!4 &1325185692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -573034951404066313, guid: 862019cb68dd9b144ac4530c1a165707, type: 3}
+  m_PrefabInstance: {fileID: 1325185687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1325185693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21880,10 +21880,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066115932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce515922f08379943bd973f70e5d82ee, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd82b5e123aa304696f340534eeef29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kopfTransform: {fileID: 649439109}
+  kopfTransform: {fileID: 1325185692}
 --- !u!1 &1492688221
 GameObject:
   m_ObjectHideFlags: 0
