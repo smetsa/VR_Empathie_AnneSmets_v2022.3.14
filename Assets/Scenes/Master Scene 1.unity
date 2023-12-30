@@ -2846,11 +2846,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 922085645}
   m_SourcePrefab: {fileID: 100100000, guid: 08a157c045a79ba4ab1073ab4819598c, type: 3}
---- !u!4 &195002567 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1528781664507809377, guid: 08a157c045a79ba4ab1073ab4819598c, type: 3}
-  m_PrefabInstance: {fileID: 195002566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &198936502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5113036025768419635, guid: 08a157c045a79ba4ab1073ab4819598c, type: 3}
@@ -18168,9 +18163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce515922f08379943bd973f70e5d82ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kopfTransform: {fileID: 517241313}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1329782387
 GameObject:
   m_ObjectHideFlags: 0
@@ -20459,12 +20451,12 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 1
   m_TimeSlicingMode: 2
-  m_Resolution: 1024
+  m_Resolution: 512
   m_UpdateFrequency: 0
   m_BoxSize: {x: 8, y: 1, z: 8}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
-  m_FarClip: 50
+  m_FarClip: 2
   m_ShadowDistance: 10
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
@@ -24472,8 +24464,8 @@ Transform:
   m_GameObject: {fileID: 1910446873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.489, y: 0.96, z: -0.608}
-  m_LocalScale: {x: 1.5658, y: 1.1067, z: 1.1491}
+  m_LocalPosition: {x: -1.714, y: 0.96, z: -0.554}
+  m_LocalScale: {x: 1.428307, y: 1.1067, z: 1.0464048}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 245040127}
@@ -24974,7 +24966,7 @@ MonoBehaviour:
   alreadyTriggered: 0
   isDelaying: 0
   audioSource: {fileID: 1983348721}
-  FrageAudioClip: {fileID: 0}
+  FrageAudioClip: {fileID: 8300000, guid: 1cab30b4b578dcd43b7ebe947cfdec19, type: 3}
 --- !u!82 &1983348721
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25855,7 +25847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd82b5e123aa304696f340534eeef29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kopfTransform: {fileID: 195002567}
+  kopfTransform: {fileID: 116734798}
 --- !u!4 &2078640820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: baed701fa4cbd6c4faa880869397a3dc, type: 3}

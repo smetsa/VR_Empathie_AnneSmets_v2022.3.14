@@ -10,8 +10,7 @@ public class Ablaufen : MonoBehaviour
     public float delayAtWaypoint = 10.0f;
     public GameObject check;
     public GameObject player;
-    public bool alreadyTriggered = false; // Variable, um zu überprüfen, ob der Trigger bereits aktiviert wurde
-
+    public bool alreadyTriggered = false;
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
     private bool reachedDestination = false;
@@ -82,19 +81,11 @@ public class Ablaufen : MonoBehaviour
                 audioSource.Pause();
                 isDelaying = true;
 
-                if (!FrageAudioPlayed) // Überprüfe, ob der FrageAudioClip noch nicht abgespielt wurde
+                if (!FrageAudioPlayed) // gesprochener Audio-Clip abspielen
                 {
                     audioSource.clip = FrageAudioClip;
-
-                    if (audioSource.clip == null)
-                    {
-                        Debug.LogError("FrageAudioClip ist nicht zugewiesen!");
-                    }
-                    else
-                    {
-                        audioSource.PlayOneShot(audioSource.clip);
-                        FrageAudioPlayed = true; // Markiere den FrageAudioClip als abgespielt
-                    }
+                    audioSource.PlayOneShot(audioSource.clip);
+                    FrageAudioPlayed = true; // Markiere den FrageAudioClip als abgespielt
                 }
 
 
