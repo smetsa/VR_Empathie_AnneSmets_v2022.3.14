@@ -94,6 +94,7 @@ public class AblaufenUndSitzen : MonoBehaviour
                 if (check.activeSelf)
                 {
                     neueAnimation.SetActive(true);
+                    neueAudioSource.SetActive(true);
                     gameObject.SetActive(false);
                     hasChecked = true;
                 }
