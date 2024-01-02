@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.593
   m_CustomReflection: {fileID: 8900000, guid: 3c4b546d96d1b6345afd414860ac8865, type: 3}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.008962307, g: 0.005364672, b: 0.008358332, a: 0.593}
+  m_IndirectSpecularColor: {r: 0.008945107, g: 0.0053538787, b: 0.008334787, a: 0.593}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12517,7 +12517,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 0.7
   MaxDistance: 3
-  Pan2D: 0
+  Pan2D: -0.384
   rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -12569,7 +12569,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.315
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -19533,6 +19533,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 862019cb68dd9b144ac4530c1a165707, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1325185693}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 862019cb68dd9b144ac4530c1a165707, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1325185695}
   m_SourcePrefab: {fileID: 100100000, guid: 862019cb68dd9b144ac4530c1a165707, type: 3}
 --- !u!1 &1325185688 stripped
 GameObject:
@@ -19556,7 +19559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adb63faab2959e47a67bbbd7e431017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ericKontrolleur: {fileID: 0}
+  kontrolleure:
+  - {fileID: 1983348712}
+  - {fileID: 2051092953}
   distanceThreshold: 0.5
 --- !u!114 &1325185691
 MonoBehaviour:
@@ -19587,6 +19592,102 @@ MonoBehaviour:
   - m_Rig: {fileID: 1093074752}
     m_Active: 1
   m_Effectors: []
+--- !u!82 &1325185695
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325185688}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2067998b54a6d694bbe3fc365d03ceaf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1329782387
 GameObject:
   m_ObjectHideFlags: 0
@@ -23822,6 +23923,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1991297348}
     m_Modifications:
+    - target: {fileID: 1208229034779863319, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608279863628611861, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2385904030000926807, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -23870,9 +23979,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5462692390973637419, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454099631826364261, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8283389994240672456, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
       propertyPath: m_Name
       value: LondonTubeCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283389994240672456, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24167,13 +24288,13 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 1
   m_TimeSlicingMode: 2
-  m_Resolution: 512
+  m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 8, y: 1, z: 8}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_BoxSize: {x: 1, y: 1, z: 2.7598243}
+  m_BoxOffset: {x: 0, y: 0, z: -1.3799121}
   m_NearClip: 0.3
   m_FarClip: 3
-  m_ShadowDistance: 10
+  m_ShadowDistance: 1
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
   m_CullingMask:
@@ -24181,7 +24302,7 @@ ReflectionProbe:
     m_Bits: 9
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 1
+  m_HDR: 0
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -24195,6 +24316,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1991297348}
     m_Modifications:
+    - target: {fileID: 1208229034779863319, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608279863628611861, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2385904030000926807, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -24243,9 +24372,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5462692390973637419, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454099631826364261, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8283389994240672456, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
       propertyPath: m_Name
       value: LondonTubeCar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283389994240672456, guid: 060ab12054d3cdc4d86094fb953a0a62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29764,11 +29905,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1544912326082472920, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1574037418406060606, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920938546069982570, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3222987645763033943, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -29821,6 +29966,18 @@ PrefabInstance:
     - target: {fileID: 4467054838058947583, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145954913672947934, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852681806655349869, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979977463492654344, guid: bfa81d650f59c3a4a9c6bd4a3114d78c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
