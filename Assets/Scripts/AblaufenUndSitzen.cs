@@ -9,7 +9,7 @@ public class AblaufenUndSitzen : MonoBehaviour
     public float rotationSpeed = 5.0f;
     public GameObject check;
     public AudioSource audioSource;
-    public AudioSource newAudioSource;
+    public GameObject neueAudioSource;
     public GameObject neueAnimation;
 
     private int currentWaypointIndex = 0;
@@ -86,7 +86,7 @@ public class AblaufenUndSitzen : MonoBehaviour
         if (finalDestination != null && neueAnimation != null)
         {
             audioSource.Pause();
-            newAudioSource.Play();
+            neueAudioSource.SetActive(true);
             animator.SetBool("warten", true);
 
             while (!hasChecked)

@@ -18,8 +18,7 @@ public class Ablaufen : MonoBehaviour
 
     private Animator animator;
     public AudioSource audioSource;
-    public AudioClip FrageAudioClip;
-    private bool FrageAudioPlayed = false;
+    public GameObject separateAudioObject;
 
     private void Start()
     {
@@ -74,33 +73,24 @@ public class Ablaufen : MonoBehaviour
 
         if (distanceToPlayer < 1f)
         {
+            animator.SetTrigger("Warten_Kontrolle");
+            audioSource.Pause();
+            isDelaying = true;
 
-            while (!alreadyTriggered)
+            separateAudioObject.SetActive(true);
+
+            if (check.activeSelf)
             {
-                animator.SetTrigger("Warten_Kontrolle");
-                audioSource.Pause();
-                isDelaying = true;
-
-                if (!FrageAudioPlayed) // gesprochener Audio-Clip abspielen
-                {
-                    audioSource.clip = FrageAudioClip;
-                    audioSource.PlayOneShot(audioSource.clip);
-                    FrageAudioPlayed = true; // Markiere den FrageAudioClip als abgespielt
-                }
-
-
-                if (check.activeSelf)
-                {
-                    animator.SetTrigger("Weitergehen");
-                    audioSource.Play();
-                    alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
-                    isDelaying = false;
-                    GoToNextWaypoint();
-                    yield break; // Beende die Coroutine, da der Check aktiv wurde
-                }
-
-                yield return null; // Warte auf den nächsten Frame, bevor die Überprüfung erneut durchgeführt wird
+                animator.SetTrigger("Weitergehen");
+                audioSource.Play();
+                alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
+                isDelaying = false;
+                GoToNextWaypoint();
+                yield break; // Beende die Coroutine, da der Check aktiv wurde
             }
+
+            yield return null; // Warte auf den nächsten Frame, bevor die Überprüfung erneut durchgeführt wird
+
         }
         else
         {
@@ -114,7 +104,6 @@ public class Ablaufen : MonoBehaviour
             GoToNextWaypoint();
         }
     }
-
 
     private void GoToNextWaypoint()
     {
