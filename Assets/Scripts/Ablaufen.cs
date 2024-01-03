@@ -36,7 +36,7 @@ public class Ablaufen : MonoBehaviour
         {
             MoveToWaypoint();
         }
-        else if (currentWaypointIndex != waypoints.Length - 2 && !isDelaying)
+        else if (currentWaypointIndex != waypoints.Length && !isDelaying)
         {
             StartCoroutine(DelayAtWaypoint());
         }
