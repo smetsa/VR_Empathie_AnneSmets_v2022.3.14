@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class OutlineSelection : MonoBehaviour
@@ -7,6 +6,7 @@ public class OutlineSelection : MonoBehaviour
     public GameObject triggerForHighlight;
 
     private Outline outline;
+    private bool wasTriggerActive = false;
 
     void Start()
     {
@@ -16,18 +16,24 @@ public class OutlineSelection : MonoBehaviour
             outline = objectToHighlight.AddComponent<Outline>();
             outline.OutlineColor = Color.magenta;
             outline.OutlineWidth = 10.0f;
+            outline.enabled = false; // Initial deaktiviert
         }
-        outline.enabled = false; // Initial deaktiviert
     }
 
     void Update()
     {
-        // Aktiviere das Hervorheben, wenn das andere GameObject aktiviert ist
-        if (triggerForHighlight.activeSelf)
+        bool isTriggerActive = triggerForHighlight.activeSelf;
+
+        if (isTriggerActive != wasTriggerActive)
         {
-            outline.enabled = true;
+            outline.enabled = isTriggerActive;
+            wasTriggerActive = isTriggerActive;
         }
-        else
+    }
+
+    void OnDisable()
+    {
+        if (outline != null)
         {
             outline.enabled = false;
         }
