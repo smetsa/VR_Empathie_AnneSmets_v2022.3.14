@@ -7,14 +7,11 @@ public class GameStartMenu : MonoBehaviour
 {
     [Header("UI Pages")]
     public GameObject mainMenu;
-    public GameObject options;
-    public GameObject about;
 
-    [Header("Main Menu Buttons")]
-    public Button startButton;
-    public Button optionButton;
-    public Button aboutButton;
-    public Button quitButton;
+    [Header("Level Buttons")]
+    public Button level1Button;
+    public Button level2Button;
+    public Button level3Button;
 
     public List<Button> returnButtons;
 
@@ -23,11 +20,10 @@ public class GameStartMenu : MonoBehaviour
     {
         EnableMainMenu();
 
-        //Hook events
-        startButton.onClick.AddListener(StartGame);
-        optionButton.onClick.AddListener(EnableOption);
-        aboutButton.onClick.AddListener(EnableAbout);
-        quitButton.onClick.AddListener(QuitGame);
+        // Hook events
+        level1Button.onClick.AddListener(() => StartLevel(1));
+        level2Button.onClick.AddListener(() => StartLevel(2));
+        level3Button.onClick.AddListener(() => StartLevel(3));
 
         foreach (var item in returnButtons)
         {
@@ -35,40 +31,19 @@ public class GameStartMenu : MonoBehaviour
         }
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    public void StartGame()
+    public void StartLevel(int level)
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(1);
+        SceneTransitionManager.singleton.GoToSceneAsync(level);
     }
 
     public void HideAll()
     {
         mainMenu.SetActive(false);
-        options.SetActive(false);
-        about.SetActive(false);
     }
 
     public void EnableMainMenu()
     {
         mainMenu.SetActive(true);
-        options.SetActive(false);
-        about.SetActive(false);
-    }
-    public void EnableOption()
-    {
-        mainMenu.SetActive(false);
-        options.SetActive(true);
-        about.SetActive(false);
-    }
-    public void EnableAbout()
-    {
-        mainMenu.SetActive(false);
-        options.SetActive(false);
-        about.SetActive(true);
     }
 }
