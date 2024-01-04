@@ -71,7 +71,7 @@ public class Ablaufen : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distanceToPlayer < 1f)
+        while (distanceToPlayer < 1f && !alreadyTriggered)
         {
             animator.SetTrigger("Warten_Kontrolle");
             audioSource.Pause();
@@ -92,17 +92,15 @@ public class Ablaufen : MonoBehaviour
             yield return null; // Warte auf den nächsten Frame, bevor die Überprüfung erneut durchgeführt wird
 
         }
-        else
-        {
-            Debug.Log("Waiting at waypoint " + currentWaypointIndex);
-            animator.SetTrigger("Warten_Kontrolle");
-            audioSource.Pause();
-            isDelaying = true;
-            yield return new WaitForSeconds(delayAtWaypoint);
-            isDelaying = false;
 
-            GoToNextWaypoint();
-        }
+        Debug.Log("Waiting at waypoint " + currentWaypointIndex);
+        animator.SetTrigger("Warten_Kontrolle");
+        audioSource.Pause();
+        isDelaying = true;
+        yield return new WaitForSeconds(delayAtWaypoint);
+        isDelaying = false;
+
+        GoToNextWaypoint();
     }
 
     private void GoToNextWaypoint()
