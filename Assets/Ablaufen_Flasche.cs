@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ablaufen : MonoBehaviour
+public class Ablaufen_Flasche : MonoBehaviour
 {
     public Transform[] waypoints;
     public float movementSpeed = 2.0f;
@@ -94,14 +94,6 @@ public class Ablaufen : MonoBehaviour
         }
 
         Debug.Log("Waiting at waypoint " + currentWaypointIndex);
-        animator.SetTrigger("Warten_Kontrolle");
-        separateAudioObject.SetActive(true);
-        audioSource.Pause();
-        isDelaying = true;
-        yield return new WaitForSeconds(delayAtWaypoint);
-        separateAudioObject.SetActive(false);
-        isDelaying = false;
-
         GoToNextWaypoint();
     }
 

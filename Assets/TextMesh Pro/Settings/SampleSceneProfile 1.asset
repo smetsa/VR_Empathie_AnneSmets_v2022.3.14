@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: -119
   saturation:
     m_OverrideState: 1
-    m_Value: -16.8
+    m_Value: -36.3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.468
   smoothness:
     m_OverrideState: 1
     m_Value: 0.4

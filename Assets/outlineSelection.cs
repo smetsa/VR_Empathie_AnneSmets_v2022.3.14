@@ -14,8 +14,8 @@ public class OutlineSelection : MonoBehaviour
         if (outline == null)
         {
             outline = objectToHighlight.AddComponent<Outline>();
-            outline.OutlineColor = Color.magenta;
-            outline.OutlineWidth = 10.0f;
+            outline.OutlineColor = Color.cyan;
+            outline.OutlineWidth = 20.0f;
             outline.enabled = false; // Initial deaktiviert
         }
     }
