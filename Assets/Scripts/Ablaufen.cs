@@ -10,6 +10,7 @@ public class Ablaufen : MonoBehaviour
     public float delayAtWaypoint = 10.0f;
     public GameObject check;
     public GameObject player;
+    public GameObject SocketInteractor;
     public bool alreadyTriggered = false;
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
@@ -78,6 +79,7 @@ public class Ablaufen : MonoBehaviour
             isDelaying = true;
 
             separateAudioObject.SetActive(true);
+            SocketInteractor.SetActive(true);
 
             if (check.activeSelf)
             {

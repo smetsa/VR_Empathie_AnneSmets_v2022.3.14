@@ -5,11 +5,12 @@ using UnityEngine;
 public class Ablaufen_Flasche : MonoBehaviour
 {
     public Transform[] waypoints;
-    public float movementSpeed = 2.0f;
-    public float rotationSpeed = 5.0f;
-    public float delayAtWaypoint = 10.0f;
+    public float movementSpeed = 1.0f;
+    public float rotationSpeed = 2.0f;
+    public float delayAtWaypoint = 6.0f;
     public GameObject check;
     public GameObject player;
+    public GameObject SocketInteractor;
     public bool alreadyTriggered = false;
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
@@ -73,9 +74,10 @@ public class Ablaufen_Flasche : MonoBehaviour
 
         while (distanceToPlayer < 1f && !alreadyTriggered)
         {
-            animator.SetTrigger("Warten_Kontrolle");
+            animator.SetTrigger("Warten_Flasche");
             audioSource.Pause();
             isDelaying = true;
+            SocketInteractor.SetActive(true);
 
             separateAudioObject.SetActive(true);
 
@@ -94,6 +96,11 @@ public class Ablaufen_Flasche : MonoBehaviour
         }
 
         Debug.Log("Waiting at waypoint " + currentWaypointIndex);
+        animator.SetTrigger("Warten_Flasche");
+        audioSource.Pause();
+        isDelaying = true;
+        yield return new WaitForSeconds(delayAtWaypoint);
+        isDelaying = false;
         GoToNextWaypoint();
     }
 
