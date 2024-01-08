@@ -20,6 +20,7 @@ public class Ablaufen_Flasche : MonoBehaviour
     private Animator animator;
     public AudioSource audioSource;
     public GameObject separateAudioObject;
+    public GameObject AudioDanke;
 
     private void Start()
     {
@@ -83,7 +84,8 @@ public class Ablaufen_Flasche : MonoBehaviour
 
             if (check.activeSelf)
             {
-                animator.SetTrigger("Weitergehen");
+                //animator.SetTrigger("Weitergehen");
+                AudioDanke.SetActive(true);
                 audioSource.Play();
                 alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 isDelaying = false;
@@ -107,7 +109,6 @@ public class Ablaufen_Flasche : MonoBehaviour
     private void GoToNextWaypoint()
     {
         reachedDestination = false;
-        Debug.Log("weitergehn");
         animator.SetTrigger("Weitergehen");
         audioSource.Play();
 

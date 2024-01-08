@@ -4,6 +4,7 @@ public class OutlineSelection : MonoBehaviour
 {
     public GameObject objectToHighlight; // Das GameObject, das hervorgehoben werden soll
     public GameObject triggerForHighlight;
+    public GameObject check;
 
     private Outline outline;
     private bool wasTriggerActive = false;
@@ -23,11 +24,20 @@ public class OutlineSelection : MonoBehaviour
     void Update()
     {
         bool isTriggerActive = triggerForHighlight.activeSelf;
+        bool isCheckActive = check == null || check.activeSelf;
+
 
         if (isTriggerActive != wasTriggerActive)
         {
             outline.enabled = isTriggerActive;
             wasTriggerActive = isTriggerActive;
+        }
+        if (isCheckActive)
+        {
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
         }
     }
 

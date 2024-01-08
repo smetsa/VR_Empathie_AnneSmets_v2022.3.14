@@ -18,7 +18,7 @@ public class Expression_Control_Lisa : MonoBehaviour
         if (triggerObject.activeSelf && !inSpecialExpression)
         {
             inSpecialExpression = true;
-            SetExpression("Extra Sad");
+            SetExpression("Sad");
             Invoke("SetDefaultExpression", extraSadDuration);
         }
     }

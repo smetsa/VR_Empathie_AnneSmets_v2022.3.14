@@ -20,6 +20,7 @@ public class Ablaufen : MonoBehaviour
     private Animator animator;
     public AudioSource audioSource;
     public GameObject separateAudioObject;
+    public GameObject AudioDanke;
 
     private void Start()
     {
@@ -85,6 +86,7 @@ public class Ablaufen : MonoBehaviour
             {
                 animator.SetTrigger("Weitergehen");
                 audioSource.Play();
+                AudioDanke.SetActive(true);
                 alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 isDelaying = false;
                 GoToNextWaypoint();

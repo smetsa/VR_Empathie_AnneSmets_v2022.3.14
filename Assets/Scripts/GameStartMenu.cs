@@ -29,21 +29,37 @@ public class GameStartMenu : MonoBehaviour
         {
             item.onClick.AddListener(EnableMainMenu);
         }
+
+
     }
 
     public void StartLevel(int level)
     {
         HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(level);
+
+
+
+
+
+
+
+
     }
 
     public void HideAll()
     {
         mainMenu.SetActive(false);
+
+
+
+
     }
 
     public void EnableMainMenu()
     {
         mainMenu.SetActive(true);
+
     }
 }
+

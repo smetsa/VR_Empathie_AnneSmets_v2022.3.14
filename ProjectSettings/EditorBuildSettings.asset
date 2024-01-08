@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/2_EmbodiedScene.unity
     guid: b7efb4b8cab130c47937ef0b3abe21a9
   - enabled: 1
-    path: Assets/Master Scene 1.unity
+    path: Assets/Scenes/Master Scene 1.unity
     guid: 92d3c4ec6e270a64b89f1daf7637bae2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 93503e93e2fef0c4eb94303a8e86d128, type: 2}

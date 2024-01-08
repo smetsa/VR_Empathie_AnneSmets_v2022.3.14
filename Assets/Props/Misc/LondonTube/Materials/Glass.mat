@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 8
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
-  - _RECEIVE_SHADOWS_OFF
   - _SPECULARHIGHLIGHTS_OFF
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
@@ -50,15 +49,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Metallic: 0.956
+    - _Metallic: 0.172
     - _Parallax: 0.02
-    - _ReceiveShadows: 0
-    - _Smoothness: 0.955
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.977
     - _SpecularHighlights: 0
     - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
     m_Colors:
-    - _BaseColor: {r: 0.16967781, g: 0.18373533, b: 0.2924528, a: 0.39215687}
-    - _Color: {r: 0.16967776, g: 0.18373528, b: 0.29245278, a: 0.39215687}
+    - _BaseColor: {r: 0.38915092, g: 0.40536556, b: 0.5188679, a: 0.12156863}
+    - _Color: {r: 0.3891509, g: 0.40536553, b: 0.51886785, a: 0.12156863}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
   m_BuildTextureStacks: []

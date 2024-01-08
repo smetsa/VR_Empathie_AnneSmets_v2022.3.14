@@ -3,14 +3,15 @@ using UnityEngine;
 public class RespawnOnExit : MonoBehaviour
 {
     private Vector3 originalPosition; // Ursprüngliche Position des Objekts
+    private Quaternion originalRotation; //Rotatiaon
     public Collider respawnArea; // Der Trigger-Collider für den Bereich
-    public float checkInterval = 0.5f; // Zeitintervall für die Überprüfung in Sekunden
+    public float checkInterval = 3f; // Zeitintervall für die Überprüfung in Sekunden
 
     void Start()
     {
         // Speichere die ursprüngliche Position des Objekts beim Start
         originalPosition = transform.position;
-
+        originalRotation = transform.rotation;
         // Starte die regelmäßige Überprüfung
         InvokeRepeating("CheckIfInArea", 0f, checkInterval);
     }
@@ -29,6 +30,10 @@ public class RespawnOnExit : MonoBehaviour
     {
         // Setze die Position des Objekts auf seine ursprüngliche Position
         transform.position = originalPosition;
-        // Füge hier zusätzliche Aktionen hinzu, die nach dem Respawn ausgeführt werden sollen
+        transform.rotation = originalRotation;
+    }
+    public void PerformRespawn()
+    {
+        Respawn();
     }
 }
