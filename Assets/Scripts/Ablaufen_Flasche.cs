@@ -86,6 +86,7 @@ public class Ablaufen_Flasche : MonoBehaviour
             {
                 //animator.SetTrigger("Weitergehen");
                 AudioDanke.SetActive(true);
+                animator.SetTrigger("Weitergehen");
                 audioSource.Play();
                 alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 isDelaying = false;

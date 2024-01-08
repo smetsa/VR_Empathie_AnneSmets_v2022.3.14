@@ -24,13 +24,16 @@ public class Lisa_NPC : MonoBehaviour
 
                 if (distance <= distanceThreshold && !triggerPlayed)
                 {
-                    animator.SetTrigger("Kontrolleur"); // Setze den Animator-Bool
-                    audioSource.Play();
+                    Invoke("TriggerAction", 2f); // Verzögere die Aktion um 2 Sekunden
                     triggerPlayed = true;
-                   // animator.SetTrigger("Sad"); // Setze den Animator-Bool
                 }
-
             }
         }
     }
-}
+
+    private void TriggerAction()
+    {
+        animator.SetTrigger("Kontrolleur"); // Setze den Animator-Bool
+        audioSource.Play();
+    }
+    }
