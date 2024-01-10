@@ -104,7 +104,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -714,8 +714,7 @@ ModelImporter:
     - name: mixamorig1:LeftHandIndex4
       parentName: mixamorig1:LeftHandIndex3
       position: {x: 0.00009233649, y: 0.024755565, z: -8.9477364e-10}
-      rotation: {x: -0.000000014901158, y: -0.000000016564062, z: 0.000000009774532,
-        w: 1}
+      rotation: {x: -0.000000014901158, y: -0.000000016564062, z: 0.000000009774532, w: 1}
       scale: {x: 1.0000002, y: 1.0000007, z: 1.0000001}
     - name: mixamorig1:LeftHandMiddle1
       parentName: mixamorig1:LeftHand
@@ -890,8 +889,7 @@ ModelImporter:
     - name: mixamorig1:RightHandPinky4
       parentName: mixamorig1:RightHandPinky3
       position: {x: -0.00000879229, y: 0.017433805, z: -9.1531546e-11}
-      rotation: {x: -0.000000036787238, y: 0.000000015726735, z: -0.000000012914011,
-        w: 1}
+      rotation: {x: -0.000000036787238, y: 0.000000015726735, z: -0.000000012914011, w: 1}
       scale: {x: 1.0000001, y: 1.0000004, z: 1.0000005}
     - name: mixamorig1:RightHandRing1
       parentName: mixamorig1:RightHand
@@ -911,8 +909,7 @@ ModelImporter:
     - name: mixamorig1:RightHandRing4
       parentName: mixamorig1:RightHandRing3
       position: {x: -0.000017262153, y: 0.023637543, z: 1.5810173e-10}
-      rotation: {x: -0.00000004423781, y: -0.000000014963804, z: -0.00000003174897,
-        w: 1}
+      rotation: {x: -0.00000004423781, y: -0.000000014963804, z: -0.00000003174897, w: 1}
       scale: {x: 0.9999998, y: 0.9999996, z: 0.99999994}
     - name: mixamorig1:RightHandThumb1
       parentName: mixamorig1:RightHand
