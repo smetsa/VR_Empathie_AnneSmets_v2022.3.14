@@ -111,16 +111,17 @@ public class Ablaufen : MonoBehaviour
 
     private void GoToNextWaypoint()
     {
-        reachedDestination = false;
-        Debug.Log("weitergehn");
-        animator.SetTrigger("Weitergehen");
-        audioSource.Play();
+        
 
         //yield return new WaitForSeconds(delayAtWaypoint);
 
         if (currentWaypointIndex < waypoints.Length)
         {
             targetWaypoint = waypoints[currentWaypointIndex];
+            reachedDestination = false;
+            Debug.Log("weitergehn");
+            animator.SetTrigger("Weitergehen");
+            audioSource.Play();
         }
         else
         {

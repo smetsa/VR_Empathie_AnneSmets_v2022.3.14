@@ -1,116 +1,326 @@
 fileFormatVersion: 2
 guid: c6005b349eb922b418e6727deef2dcbe
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: LondonTubeCar
-    100004: PassengerCar
-    100006: Wheels01
-    100008: Wheels01 1
-    100010: Wheels02
-    100012: Wheels02 1
-    100014: Wheels03
-    100016: Wheels03 1
-    100018: Wheels04
-    100020: Wheels04 1
-    400000: //RootNode
-    400002: LondonTubeCar
-    400004: PassengerCar
-    400006: Wheels01
-    400008: Wheels01 1
-    400010: Wheels02
-    400012: Wheels02 1
-    400014: Wheels03
-    400016: Wheels03 1
-    400018: Wheels04
-    400020: Wheels04 1
-    2100000: LightGreyMetalShader
-    2100002: RedMetalShader
-    2100004: WhiteMetalShader
-    2100006: BlueMetalShader
-    2100008: TrainStationTextShader
-    2100010: BeigeMetalShader
-    2100012: GreenButtonShader
-    2100014: GreyMetalShader
-    2100016: Metal01_Shader
-    2100018: WhiteLightShader
-    2100020: StainlessSteelShader
-    2100022: OrangeLightShader
-    2100024: SeatCoversShader
-    2100026: DecalsShader
-    2100028: BlackRubberShader
-    2100030: BlueMonitorShader
-    2100032: FloorShader
-    2100034: RubberFloorTexture
-    2100036: RedPlastic
-    2100038: GreyPlasticShader
-    2100040: WhitePlasticShader
-    2100042: Poster1Shader
-    2100044: Glass_Dark
-    2100046: DarkMetalShader
-    2100048: Poster2Shader
-    2100050: UndergroundMapsShader
-    2100052: LightBlueMetalShader
-    2100054: YellowMetalShader
-    2100056: DecalsShader1
-    2100058: RubberFloorTexture1
-    2100060: StainlessSteelShader1
-    2100062: SeatCoversShader1
-    2100064: RedPlastic1
-    2100066: GreyPlasticShader1
-    2100068: WhitePlasticShader1
-    2100070: Poster1Shader1
-    2100072: BlackRubberShader1
-    2100074: Glass_Dark1
-    2100076: DarkMetalShader1
-    2100078: Poster2Shader1
-    2100080: UndergroundMapsShader1
-    2100082: WhiteLightShader1
-    2100084: LightBlueMetalShader1
-    2100086: YellowMetalShader1
-    2100088: Metal01_Shader1
-    2100090: FloorShader1
-    2100092: RedMetalShader1
-    2100094: BeigeMetalShader1
-    2100096: TrainStationTextShader1
-    2100098: WhiteMetalShader1
-    2100100: BlueMetalShader1
-    2100102: LightGreyMetalShader1
-    2300000: LondonTubeCar
-    2300002: PassengerCar
-    2300004: Wheels01
-    2300006: Wheels01 1
-    2300008: Wheels02
-    2300010: Wheels02 1
-    2300012: Wheels03
-    2300014: Wheels03 1
-    2300016: Wheels04
-    2300018: Wheels04 1
-    3300000: LondonTubeCar
-    3300002: PassengerCar
-    3300004: Wheels01
-    3300006: Wheels01 1
-    3300008: Wheels02
-    3300010: Wheels02 1
-    3300012: Wheels03
-    3300014: Wheels03 1
-    3300016: Wheels04
-    3300018: Wheels04 1
-    4300000: LondonTubeCar
-    4300002: PassengerCar
-    4300004: Wheels01
-    4300006: Wheels02
-    4300008: Wheels03
-    4300010: Wheels04
-    4300012: Wheels01
-    4300014: Wheels02
-    4300016: Wheels03
-    4300018: Wheels04
-    9500000: //RootNode
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: LondonTubeCar
+  - first:
+      1: 100004
+    second: PassengerCar
+  - first:
+      1: 100006
+    second: Wheels01
+  - first:
+      1: 100008
+    second: Wheels01 1
+  - first:
+      1: 100010
+    second: Wheels02
+  - first:
+      1: 100012
+    second: Wheels02 1
+  - first:
+      1: 100014
+    second: Wheels03
+  - first:
+      1: 100016
+    second: Wheels03 1
+  - first:
+      1: 100018
+    second: Wheels04
+  - first:
+      1: 100020
+    second: Wheels04 1
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: LondonTubeCar
+  - first:
+      4: 400004
+    second: PassengerCar
+  - first:
+      4: 400006
+    second: Wheels01
+  - first:
+      4: 400008
+    second: Wheels01 1
+  - first:
+      4: 400010
+    second: Wheels02
+  - first:
+      4: 400012
+    second: Wheels02 1
+  - first:
+      4: 400014
+    second: Wheels03
+  - first:
+      4: 400016
+    second: Wheels03 1
+  - first:
+      4: 400018
+    second: Wheels04
+  - first:
+      4: 400020
+    second: Wheels04 1
+  - first:
+      21: 2100000
+    second: LightGreyMetalShader
+  - first:
+      21: 2100002
+    second: RedMetalShader
+  - first:
+      21: 2100004
+    second: WhiteMetalShader
+  - first:
+      21: 2100006
+    second: BlueMetalShader
+  - first:
+      21: 2100008
+    second: TrainStationTextShader
+  - first:
+      21: 2100010
+    second: BeigeMetalShader
+  - first:
+      21: 2100012
+    second: GreenButtonShader
+  - first:
+      21: 2100014
+    second: GreyMetalShader
+  - first:
+      21: 2100016
+    second: Metal01_Shader
+  - first:
+      21: 2100018
+    second: WhiteLightShader
+  - first:
+      21: 2100020
+    second: StainlessSteelShader
+  - first:
+      21: 2100022
+    second: OrangeLightShader
+  - first:
+      21: 2100024
+    second: SeatCoversShader
+  - first:
+      21: 2100026
+    second: DecalsShader
+  - first:
+      21: 2100028
+    second: BlackRubberShader
+  - first:
+      21: 2100030
+    second: BlueMonitorShader
+  - first:
+      21: 2100032
+    second: FloorShader
+  - first:
+      21: 2100034
+    second: RubberFloorTexture
+  - first:
+      21: 2100036
+    second: RedPlastic
+  - first:
+      21: 2100038
+    second: GreyPlasticShader
+  - first:
+      21: 2100040
+    second: WhitePlasticShader
+  - first:
+      21: 2100042
+    second: Poster1Shader
+  - first:
+      21: 2100044
+    second: Glass_Dark
+  - first:
+      21: 2100046
+    second: DarkMetalShader
+  - first:
+      21: 2100048
+    second: Poster2Shader
+  - first:
+      21: 2100050
+    second: UndergroundMapsShader
+  - first:
+      21: 2100052
+    second: LightBlueMetalShader
+  - first:
+      21: 2100054
+    second: YellowMetalShader
+  - first:
+      21: 2100056
+    second: DecalsShader1
+  - first:
+      21: 2100058
+    second: RubberFloorTexture1
+  - first:
+      21: 2100060
+    second: StainlessSteelShader1
+  - first:
+      21: 2100062
+    second: SeatCoversShader1
+  - first:
+      21: 2100064
+    second: RedPlastic1
+  - first:
+      21: 2100066
+    second: GreyPlasticShader1
+  - first:
+      21: 2100068
+    second: WhitePlasticShader1
+  - first:
+      21: 2100070
+    second: Poster1Shader1
+  - first:
+      21: 2100072
+    second: BlackRubberShader1
+  - first:
+      21: 2100074
+    second: Glass_Dark1
+  - first:
+      21: 2100076
+    second: DarkMetalShader1
+  - first:
+      21: 2100078
+    second: Poster2Shader1
+  - first:
+      21: 2100080
+    second: UndergroundMapsShader1
+  - first:
+      21: 2100082
+    second: WhiteLightShader1
+  - first:
+      21: 2100084
+    second: LightBlueMetalShader1
+  - first:
+      21: 2100086
+    second: YellowMetalShader1
+  - first:
+      21: 2100088
+    second: Metal01_Shader1
+  - first:
+      21: 2100090
+    second: FloorShader1
+  - first:
+      21: 2100092
+    second: RedMetalShader1
+  - first:
+      21: 2100094
+    second: BeigeMetalShader1
+  - first:
+      21: 2100096
+    second: TrainStationTextShader1
+  - first:
+      21: 2100098
+    second: WhiteMetalShader1
+  - first:
+      21: 2100100
+    second: BlueMetalShader1
+  - first:
+      21: 2100102
+    second: LightGreyMetalShader1
+  - first:
+      23: 2300000
+    second: LondonTubeCar
+  - first:
+      23: 2300002
+    second: PassengerCar
+  - first:
+      23: 2300004
+    second: Wheels01
+  - first:
+      23: 2300006
+    second: Wheels01 1
+  - first:
+      23: 2300008
+    second: Wheels02
+  - first:
+      23: 2300010
+    second: Wheels02 1
+  - first:
+      23: 2300012
+    second: Wheels03
+  - first:
+      23: 2300014
+    second: Wheels03 1
+  - first:
+      23: 2300016
+    second: Wheels04
+  - first:
+      23: 2300018
+    second: Wheels04 1
+  - first:
+      33: 3300000
+    second: LondonTubeCar
+  - first:
+      33: 3300002
+    second: PassengerCar
+  - first:
+      33: 3300004
+    second: Wheels01
+  - first:
+      33: 3300006
+    second: Wheels01 1
+  - first:
+      33: 3300008
+    second: Wheels02
+  - first:
+      33: 3300010
+    second: Wheels02 1
+  - first:
+      33: 3300012
+    second: Wheels03
+  - first:
+      33: 3300014
+    second: Wheels03 1
+  - first:
+      33: 3300016
+    second: Wheels04
+  - first:
+      33: 3300018
+    second: Wheels04 1
+  - first:
+      43: 4300000
+    second: LondonTubeCar
+  - first:
+      43: 4300002
+    second: PassengerCar
+  - first:
+      43: 4300004
+    second: Wheels01
+  - first:
+      43: 4300006
+    second: Wheels02
+  - first:
+      43: 4300008
+    second: Wheels03
+  - first:
+      43: 4300010
+    second: Wheels04
+  - first:
+      43: 4300012
+    second: Wheels01
+  - first:
+      43: 4300014
+    second: Wheels02
+  - first:
+      43: 4300016
+    second: Wheels03
+  - first:
+      43: 4300018
+    second: Wheels04
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -119,6 +329,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -143,25 +354,36 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -170,10 +392,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -183,13 +405,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
