@@ -3,63 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameStartMenu : MonoBehaviour
+public class LevelSelection : MonoBehaviour
 {
-    [Header("UI Pages")]
-    public GameObject mainMenu;
+    public GameObject startButton;
+    public List<Button> levelButtons;
 
-    [Header("Level Buttons")]
-    public Button level1Button;
-    public Button level2Button;
-    public Button level3Button;
+    private Button selectedLevel;
 
-    public List<Button> returnButtons;
-
-    // Start is called before the first frame update
     void Start()
     {
-        EnableMainMenu();
+        startButton.SetActive(false); // Start-Button zu Beginn deaktivieren
 
-        // Hook events
-        level1Button.onClick.AddListener(() => StartLevel(1));
-        level2Button.onClick.AddListener(() => StartLevel(2));
-        level3Button.onClick.AddListener(() => StartLevel(3));
-
-        foreach (var item in returnButtons)
+        foreach (var levelButton in levelButtons)
         {
-            item.onClick.AddListener(EnableMainMenu);
+            levelButton.onClick.AddListener(() => SelectLevel(levelButton));
         }
 
+        startButton.GetComponent<Button>().onClick.AddListener(StartSelectedLevel);
+    }
 
+    void SelectLevel(Button levelButton)
+    {
+        if (selectedLevel != null)
+        {
+            selectedLevel.interactable = true; // Aktiviere den vorher ausgewählten Level-Button
+        }
+
+        selectedLevel = levelButton; // Setze das ausgewählte Level
+        selectedLevel.interactable = false; // Deaktiviere den ausgewählten Level-Button
+        startButton.SetActive(true); // Start-Button aktivieren
+        DisableAllLevelButtons();
+        int level = int.Parse(selectedLevel.name.Substring(selectedLevel.name.Length - 1)); // Extrahiere die Levelnummer aus dem Namen
+    }
+
+    void StartSelectedLevel()
+    {
+        if (selectedLevel != null)
+        {
+            int level = int.Parse(selectedLevel.name.Substring(selectedLevel.name.Length - 1)); // Extrahiere die Levelnummer aus dem Namen
+            StartLevel(level);
+        }
     }
 
     public void StartLevel(int level)
     {
-        HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(level);
-
-
-
-
-
-
-
-
+        Debug.Log("Start Level " + level);
     }
-
-    public void HideAll()
+    void DisableAllLevelButtons()
     {
-        mainMenu.SetActive(false);
-
-
-
-
-    }
-
-    public void EnableMainMenu()
-    {
-        mainMenu.SetActive(true);
-
+        foreach (var levelButton in levelButtons)
+        {
+            levelButton.gameObject.SetActive(false); // Deaktiviere den Level-Button
+        }
     }
 }
-

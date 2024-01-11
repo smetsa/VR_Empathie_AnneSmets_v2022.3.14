@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.593
   m_CustomReflection: {fileID: 8900000, guid: 3c4b546d96d1b6345afd414860ac8865, type: 3}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.008879866, g: 0.005339422, b: 0.008332431, a: 0.593}
+  m_IndirectSpecularColor: {r: 0.009141774, g: 0.005477783, b: 0.0085323965, a: 0.593}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9034,7 +9034,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645960078}
-  - component: {fileID: 645960077}
   m_Layer: 6
   m_Name: "Fader_Ausl\xF6ser"
   m_TagString: Untagged
@@ -9042,19 +9041,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &645960077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645960076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97235d8845c6f5e4d954de0e3bd0054b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 0}
 --- !u!4 &645960078
 Transform:
   m_ObjectHideFlags: 0

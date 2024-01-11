@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 8841422738568278765, guid: b09d33c8b7830a34d89d176d138cba96, type: 3}
       propertyPath: secondUI
       value: 
-      objectReference: {fileID: 450604070}
+      objectReference: {fileID: 1163744328}
     - target: {fileID: 8841422738568278765, guid: b09d33c8b7830a34d89d176d138cba96, type: 3}
       propertyPath: startMenu
       value: 
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Version A
+  m_text: 3. Person
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 404889485}
   - component: {fileID: 404889482}
   m_Layer: 5
-  m_Name: Embodied_Sympt_Level
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1386,11 +1386,11 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 6178
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1449,7 +1449,7 @@ GameObject:
   - component: {fileID: 448256129}
   - component: {fileID: 448256132}
   m_Layer: 5
-  m_Name: Outside_Level
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,11 +1604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af07645f3014a1347a5b1232afc24251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
-  level1Button: {fileID: 0}
-  level2Button: {fileID: 0}
-  level3Button: {fileID: 0}
-  returnButtons: []
+  startButton: {fileID: 0}
+  levelButtons: []
 --- !u!114 &450604072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2637,7 +2634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Version C
+  m_text: 1. Person +
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4410,11 +4407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af07645f3014a1347a5b1232afc24251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1163744328}
-  level1Button: {fileID: 448256129}
-  level2Button: {fileID: 1516038912}
-  level3Button: {fileID: 404889485}
-  returnButtons: []
+  startButton: {fileID: 1302042184}
+  levelButtons:
+  - {fileID: 448256129}
+  - {fileID: 1516038912}
+  - {fileID: 404889485}
 --- !u!1 &1234282223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,7 +5505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Version B
+  m_text: 1. Person
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5599,7 +5596,7 @@ GameObject:
   - component: {fileID: 1516038912}
   - component: {fileID: 1516038909}
   m_Layer: 5
-  m_Name: Embbodied_Levle
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
-
-
+    public Button startButton;
+    public GameObject secondUI;
     public static SceneTransitionManager singleton;
-
+    private bool startButtonPressed = false;
 
     private void Awake()
     {
@@ -19,8 +19,17 @@ public class SceneTransitionManager : MonoBehaviour
 
         singleton = this;
     }
+    private void Start()
+    {
+        // Finde den Button und füge ihm eine Funktion hinzu, die aufgerufen wird, wenn er geklickt wird
+        startButton.onClick.AddListener(OnStartButtonClick);
+    }
 
-
+    void OnStartButtonClick()
+    {
+        // Setze den Zustand des Start-Buttons auf "gedrückt"
+        startButtonPressed = true;
+    }
 
     public void GoToScene(int sceneIndex)
     {
@@ -40,12 +49,11 @@ public class SceneTransitionManager : MonoBehaviour
     {
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
     }
-
     IEnumerator GoToSceneAsyncRoutine(int sceneIndex)
     {
 
         fadeScreen.FadeOut();
-        //Launch the new scene
+        // Neue Szene starten
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
 
