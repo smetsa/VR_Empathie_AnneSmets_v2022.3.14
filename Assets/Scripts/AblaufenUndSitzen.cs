@@ -7,6 +7,7 @@ public class AblaufenUndSitzen : MonoBehaviour
     public Transform finalDestination;
     public float movementSpeed = 2.0f;
     public float rotationSpeed = 5.0f;
+    public float delayStartSeconds = 2f;
     public GameObject check;
     public AudioSource audioSource;
     public GameObject neueAudioSource;
@@ -17,9 +18,15 @@ public class AblaufenUndSitzen : MonoBehaviour
     private bool reachedDestination = false;
     private bool reachedFinalDestination = false;
 
+
+
     private Animator animator;
 
     private void Start()
+    {
+        Invoke("DelayedStart", delayStartSeconds); 
+    }
+    private void DelayedStart()
     {
         animator = GetComponent<Animator>();
 
