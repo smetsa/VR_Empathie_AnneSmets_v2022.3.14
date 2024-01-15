@@ -6,17 +6,17 @@ public class Kopfhörer : MonoBehaviour
     private Vector3 offsetPosition; // Ausgangsposition Kopfhörer relativ zum Kopf
     private Quaternion offsetRotation; // Ausgangsrotation relativ zum Kopf
 
-    void Start()
+    void Awake()
     {
         // Ausgangsposition und -rotation relativ zum Kopf
-        offsetPosition = transform.position - kopfTransform.position;
+        offsetPosition = kopfTransform.InverseTransformPoint(transform.position);
         offsetRotation = Quaternion.Inverse(kopfTransform.rotation) * transform.rotation;
     }
 
     void Update()
     {
         // Aktualisiere die Position und Rotation
-        transform.position = kopfTransform.position + kopfTransform.rotation * offsetPosition;
+        transform.position = kopfTransform.TransformPoint(offsetPosition);
         transform.rotation = kopfTransform.rotation * offsetRotation;
     }
 }

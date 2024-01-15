@@ -50,10 +50,10 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Metallic: 0.106
+    - _Metallic: 0.207
     - _Parallax: 0.02
     - _ReceiveShadows: 1
-    - _Smoothness: 0.951
+    - _Smoothness: 0.988
     - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1

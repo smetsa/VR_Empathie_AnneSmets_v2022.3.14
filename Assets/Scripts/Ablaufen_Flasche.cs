@@ -90,6 +90,7 @@ public class Ablaufen_Flasche : MonoBehaviour
                 audioSource.Play();
                 alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 isDelaying = false;
+                animator.ResetTrigger("Warten_Flasche");
                 GoToNextWaypoint();
                 yield break; // Beende die Coroutine, da der Check aktiv wurde
             }

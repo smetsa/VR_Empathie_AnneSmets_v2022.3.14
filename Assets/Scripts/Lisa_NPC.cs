@@ -13,7 +13,7 @@ public class Lisa_NPC : MonoBehaviour
     private Vector3 originalAttachPointPosition; // Die ursprüngliche Position des Attach Points
     private bool isMoving = false; // Gibt an, ob die Position gerade geändert wird
     private float moveSpeed = 0.5f; // Die Geschwindigkeit der schrittweisen Änderung
-    private float pauseDuration = 1f; // Die Dauer des Verweilens in der neuen Position
+    private float pauseDuration = 0.5f; // Die Dauer des Verweilens in der neuen Position
 
     private void Start()
     {
