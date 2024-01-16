@@ -39,7 +39,7 @@ public class IKTargetFollowVRRig : MonoBehaviour
     public float minHeightFromGround = 1.0f;
     public float maxHeightFromGround = 1.99f;
 
-    void Update()
+    void FixedUpdate()
     {
         // Kopf-, Hand- und Körper-IK-Ziele aktualisieren
         head.Map(turnSmoothness);
@@ -56,24 +56,29 @@ public class IKTargetFollowVRRig : MonoBehaviour
             head.ikTarget.position = headPos;
         }
 
+        // Kopfrotation
         float headYaw = head.vrTarget.eulerAngles.y - headBodyYawOffset;
         float headPitch = head.vrTarget.eulerAngles.x;
         float headRoll = head.vrTarget.eulerAngles.z;
-
-        // Oberkörperdrehung
-        float upperBodyYaw = headYaw * 0.9f;
-
-        // Rotation nur für den Oberkörper
-        Quaternion upperBodyRotation = Quaternion.Euler(0.8f, upperBodyYaw, 0.9f);
+        Quaternion headRotation = Quaternion.Euler(headPitch, headYaw, headRoll);
 
         // Spine-Bones oben vom Pelvis anpassen
-        Quaternion spineRotation = Quaternion.Euler(headPitch, 0.7f, headRoll);
+        Quaternion spineRotation = Quaternion.Euler(headPitch, 0.1f, headRoll);
 
-        // Kombiniere die Rotationen
-        Quaternion finalRotation = Quaternion.Slerp(spine3Bone.rotation, spineRotation * upperBodyRotation, turnSmoothness);
+        // Kombiniere die Rotationen für den Kopf
+        Quaternion finalHeadRotation = headRotation * Quaternion.Inverse(spineRotation);
 
-        // Wende die Rotation auf den Oberkörper an
-        spine3Bone.rotation = finalRotation;
+        // Wende die Rotation auf den Kopf an
+        head.ikTarget.rotation = finalHeadRotation;
 
+        // Kopiere die Rotation der Spine für den Oberkörper
+        Quaternion finalUpperBodyRotation = spineRotation;
+
+        // Spine-Bones oben vom Pelvis anpassen
+        spine3Bone.rotation = finalUpperBodyRotation;
+
+        // Setze die Handpositionen nach der Spine-Aktualisierung
+        leftHand.ikTarget.position = leftHand.vrTarget.position;
+        rightHand.ikTarget.position = rightHand.vrTarget.position;
     }
 }
