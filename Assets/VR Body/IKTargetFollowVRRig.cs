@@ -39,7 +39,7 @@ public class IKTargetFollowVRRig : MonoBehaviour
     public float minHeightFromGround = 1.0f;
     public float maxHeightFromGround = 1.99f;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         // Kopf-, Hand- und Körper-IK-Ziele aktualisieren
         head.Map(turnSmoothness);
@@ -62,26 +62,21 @@ public class IKTargetFollowVRRig : MonoBehaviour
         float headRoll = head.vrTarget.eulerAngles.z;
         Quaternion headRotation = Quaternion.Euler(headPitch, headYaw, headRoll);
 
+        
         // Spine-Bones oben vom Pelvis anpassen
-        Quaternion spineRotation = Quaternion.Euler(headPitch, headYaw, headRoll);
-
-        // Spine-Rotation auf Target-Rotation setzen
-        spine3Bone.rotation = head.vrTarget.rotation;
-
-        // Spine-Bones oben vom Pelvis anpassen
-        //Quaternion spineRotation = Quaternion.Euler(headPitch, 0.1f, headRoll);
+        Quaternion spineRotation = Quaternion.Euler(headPitch, 0.1f, headRoll);
 
         // Kombiniere die Rotationen für den Kopf
-        //Quaternion finalHeadRotation = headRotation * Quaternion.Inverse(spineRotation);
+        Quaternion finalHeadRotation = headRotation * Quaternion.Inverse(spineRotation);
 
         // Wende die Rotation auf den Kopf an
-       // head.ikTarget.rotation = finalHeadRotation;
+        head.ikTarget.rotation = finalHeadRotation;
 
         // Kopiere die Rotation der Spine für den Oberkörper
-        //Quaternion finalUpperBodyRotation = spineRotation;
+        Quaternion finalUpperBodyRotation = spineRotation;
 
         // Spine-Bones oben vom Pelvis anpassen
-        //spine3Bone.rotation = finalUpperBodyRotation;
+        spine3Bone.rotation = finalUpperBodyRotation;
 
         // Setze die Handpositionen nach der Spine-Aktualisierung
         leftHand.ikTarget.position = leftHand.vrTarget.position;
