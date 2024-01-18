@@ -39,7 +39,7 @@ public class IKTargetFollowVRRig : MonoBehaviour
     public float minHeightFromGround = 1.0f;
     public float maxHeightFromGround = 1.99f;
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         // Kopf-, Hand- und Körper-IK-Ziele aktualisieren
         head.Map(turnSmoothness);
