@@ -89,6 +89,7 @@ public class Ablaufen : MonoBehaviour
                 AudioDanke.SetActive(true);
                 alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 isDelaying = false;
+                animator.ResetTrigger("Warten_Kontrolle");
                 GoToNextWaypoint();
                 yield break; // Beende die Coroutine, da der Check aktiv wurde
             }

@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutsideScene.unity
     guid: dd81373514474d04c930c3b95a4f859d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/2_EmbodiedScene.unity
     guid: b7efb4b8cab130c47937ef0b3abe21a9
   - enabled: 1

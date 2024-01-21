@@ -8,6 +8,7 @@ TagManager:
   - Ticket
   - Backpack
   - Reflection Probe ignore
+  - "Kopfh\xF6rer"
   layers:
   - Default
   - TransparentFX
