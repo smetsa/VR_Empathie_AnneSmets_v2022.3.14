@@ -57,16 +57,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 504.86667
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        time: 471.25
+        value: 0.014579773
+        inSlope: 0.00011724394
+        outSlope: 0.00011724394
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 513.38336
+        time: 498.46667
         value: 1
         inSlope: 0
         outSlope: 0
@@ -195,7 +195,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 513.38336
+    m_StopTime: 498.46667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -234,16 +234,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 504.86667
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        time: 471.25
+        value: 0.014579773
+        inSlope: 0.00011724394
+        outSlope: 0.00011724394
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 513.38336
+        time: 498.46667
         value: 1
         inSlope: 0
         outSlope: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 357.84858333333335
+    m_Start: 361.3833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 6872659151387132996}
     m_Duration: 134.18475
@@ -536,7 +536,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 199535__mlekoman__train2
   - m_Version: 1
-    m_Start: 501.6333333333333
+    m_Start: 482.3126638321996
     m_ClipIn: 0
     m_Asset: {fileID: 2311700801009202033}
     m_Duration: 13.255419501133787
@@ -762,7 +762,7 @@ MonoBehaviour:
   - {fileID: -2717699718746135954}
   - {fileID: 6569058583766660234}
   - {fileID: 744330796293775371}
-  m_FixedDuration: 515.2666666666667
+  m_FixedDuration: 506.1666666666667
   m_EditorSettings:
     m_Framerate: 60
     m_ScenePreview: 1

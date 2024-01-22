@@ -1,8 +1,10 @@
 using UnityEngine;
 
+
 public class Expression_Control_Lisa : MonoBehaviour
 {
     public GameObject triggerObject; // Das GameObject, das als Trigger dient, bei Lisa das Smartphone
+    public GameObject audioReaktion;
     private Animator anim;
     private bool inSpecialExpression = false;
     private string currentExpression = "Default";
@@ -20,6 +22,7 @@ public class Expression_Control_Lisa : MonoBehaviour
             inSpecialExpression = true;
             SetExpression("Sad");
             Invoke("SetDefaultExpression", extraSadDuration);
+            audioReaktion.SetActive(true);
         }
     }
 

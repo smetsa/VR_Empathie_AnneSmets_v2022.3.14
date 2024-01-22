@@ -52,8 +52,10 @@ public class Lisa_NPC : MonoBehaviour
 
     private void TriggerAction()
     {
-        
-        audioSource.Play();
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 
     private System.Collections.IEnumerator MoveAttachPoint()
