@@ -1485,39 +1485,6 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Iphone_text
   - m_Version: 1
-    m_Start: 264.8678618197278
-    m_ClipIn: 0
-    m_Asset: {fileID: 4510199456365997145}
-    m_Duration: 2.246395833333333
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 6923237046656211151}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: train-door
-  - m_Version: 1
     m_Start: 246.91234183673495
     m_ClipIn: 0
     m_Asset: {fileID: -4368396379065558306}
@@ -1586,6 +1553,39 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: Durchsage_Gesamtschule
+  - m_Version: 1
+    m_Start: 323.99701232993175
+    m_ClipIn: 0
+    m_Asset: {fileID: -1590273657691040189}
+    m_Duration: 6.06525
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 6923237046656211151}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Waldsaum
   - m_Version: 1
     m_Start: 262.3482019557822
     m_ClipIn: 0
@@ -1656,10 +1656,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Durchsage_Gesamtschule_ganzkurz
   - m_Version: 1
-    m_Start: 323.99701232993175
+    m_Start: 264.8678618197278
     m_ClipIn: 0
-    m_Asset: {fileID: -1590273657691040189}
-    m_Duration: 6.06525
+    m_Asset: {fileID: 4510199456365997145}
+    m_Duration: 2.246395833333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6923237046656211151}
     m_EaseInDuration: 0
@@ -1687,7 +1687,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Waldsaum
+    m_DisplayName: train-door
   m_Markers:
     m_Objects: []
   m_TrackProperties:
