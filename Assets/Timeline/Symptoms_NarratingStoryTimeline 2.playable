@@ -22,8 +22,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 491.31668
-        value: -0.014579773
+        time: 490.95
+        value: 0.00021002069
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -31,8 +31,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 497.5
-        value: 1
+        time: 497.46667
+        value: 1.0147896
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -70,7 +70,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 497.5
+    m_StopTime: 497.46667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,8 +91,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 491.31668
-        value: -0.014579773
+        time: 490.95
+        value: 0.00021002069
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -100,8 +100,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 497.5
-        value: 1
+        time: 497.46667
+        value: 1.0147896
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 1
+  m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -1749,7 +1749,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Waldsaum
   - m_Version: 1
-    m_Start: 266.3
+    m_Start: 264.05
     m_ClipIn: 0
     m_Asset: {fileID: 1481769683137578436}
     m_Duration: 2.519659863945578
@@ -1818,7 +1818,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Durchsage_Gesamtschule_ganzkurz
   - m_Version: 1
-    m_Start: 268.8196598639456
+    m_Start: 266.5696598639456
     m_ClipIn: 0
     m_Asset: {fileID: 4510199456365997145}
     m_Duration: 2.246395833333333
